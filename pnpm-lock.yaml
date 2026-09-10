@@ -92,8 +92,8 @@ importers:
         specifier: 0.2.17
         version: 0.2.17
       fast-check:
-        specifier: 3.23.2
-        version: 3.23.2
+        specifier: 4.9.0
+        version: 4.9.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -192,8 +192,8 @@ importers:
         specifier: 0.2.17
         version: 0.2.17
       fast-check:
-        specifier: 3.23.2
-        version: 3.23.2
+        specifier: 4.9.0
+        version: 4.9.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -271,8 +271,8 @@ importers:
         specifier: 0.2.17
         version: 0.2.17
       fast-check:
-        specifier: 3.23.2
-        version: 3.23.2
+        specifier: 4.9.0
+        version: 4.9.0
       http-server:
         specifier: 14.1.1
         version: 14.1.1
@@ -491,8 +491,8 @@ importers:
         specifier: 0.2.17
         version: 0.2.17
       fast-check:
-        specifier: 3.23.2
-        version: 3.23.2
+        specifier: 4.9.0
+        version: 4.9.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -672,8 +672,8 @@ importers:
         specifier: 0.2.17
         version: 0.2.17
       fast-check:
-        specifier: 3.23.2
-        version: 3.23.2
+        specifier: 4.9.0
+        version: 4.9.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -2944,6 +2944,7 @@ packages:
   '@xmldom/xmldom@0.8.13':
     resolution: {integrity: sha512-KRYzxepc14G/CEpEGc3Yn+JKaAeT63smlDr+vjB8jRfgTBBI9wRj/nkQEO+ucV8p8I9bfKLWp37uHgFrbntPvw==}
     engines: {node: '>=10.0.0'}
+    deprecated: this version has critical issues, please update to the latest version
 
   '@yarnpkg/lockfile@1.1.0':
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
@@ -3185,6 +3186,10 @@ packages:
 
   axe-core@4.12.1:
     resolution: {integrity: sha512-s7iGf5GaVMxEG0ENN9x+xTr7GFZCb1ZP/1uATUpCEK2X78nDB3RwbtFCo9pGAf9ru+VwoQ464DkaLEeRM08wJA==}
+    engines: {node: '>=4'}
+
+  axe-core@4.13.0:
+    resolution: {integrity: sha512-UzGt8zg7Ny8djbYMhxl2zuEevVa7r2gJjYY5Lwr1xM7+XU2nd6CkIWFTVcCIbAP63vSz71NaVyyuSk9lHKcy0A==}
     engines: {node: '>=4'}
 
   axios@1.18.1:
@@ -4265,8 +4270,8 @@ packages:
   eslint-import-resolver-node@0.3.10:
     resolution: {integrity: sha512-tRrKqFyCaKict5hOd244sL6EQFNycnMQnBe+j8uqGNXYzsImGbGUU4ibtoaBmv5FLwJwcFJNeg1GeVjQfbMrDQ==}
 
-  eslint-module-utils@2.13.0:
-    resolution: {integrity: sha512-bLohSkT6469rRs8czj0tLTD8vaeIS/whvPRJVjDr7IuoTT1k5DYDERlNycjDj/HkOlvQdYurmfZ/g3fG5bgeLQ==}
+  eslint-module-utils@2.14.0:
+    resolution: {integrity: sha512-W2WCRZ9Dqntd+2u8jJcVMV2PKulc6RdLgUUoh/yQr3uB6lo/ZOeGx11sv60/8S4QFFKNslAlWhr9u0Ef7ZW6Ig==}
     engines: {node: '>=4'}
     peerDependencies:
       '@typescript-eslint/parser': '*'
@@ -4454,9 +4459,9 @@ packages:
     engines: {node: '>= 10.17.0'}
     hasBin: true
 
-  fast-check@3.23.2:
-    resolution: {integrity: sha512-h5+1OzzfCC3Ef7VbtKdcv7zsstUQwUDlYpUTvjeUsJAssPgLn7QzbboPtL5ro04Mq0rPOsMzl7q5hIbRs2wD1A==}
-    engines: {node: '>=8.0.0'}
+  fast-check@4.9.0:
+    resolution: {integrity: sha512-7ms6T7SybUev/PQITciI0yLM2pOSFy5zpG8Ty7tQofcVaQUvrMXp6CBwqF6fThLCLOrfBtuHAtwq6Yu4XPCllg==}
+    engines: {node: '>=12.17.0'}
 
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -6567,8 +6572,8 @@ packages:
     resolution: {integrity: sha512-T5ScUMAsmhdNbgDR41AGESYeS6V9MSgetkSnVhhW+gXvzC42VesKCn5ld87gAZDJ6vLHL9GkRvY9WtQWSnwFbw==}
     engines: {node: '>=18'}
 
-  pure-rand@6.1.0:
-    resolution: {integrity: sha512-bVWawvoZoBYpp6yIoQtQXHZjmz35RSVHnUOTefl8Vcjr8snTPY1wnpSPMWekcFwbxI6gtmT7rSYPFvz71ldiOA==}
+  pure-rand@8.4.2:
+    resolution: {integrity: sha512-vvuOGgcuPJAirlHvuQw1TrOiw7ptaIXXmIbNuiNOY6lNGJJH49PQ1Kj4nd783nPdQhQdicgOjVI2yI/9BD6/Ng==}
 
   q@1.5.1:
     resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
@@ -11570,6 +11575,8 @@ snapshots:
 
   axe-core@4.12.1: {}
 
+  axe-core@4.13.0: {}
+
   axios@1.18.1:
     dependencies:
       follow-redirects: 1.16.0
@@ -12758,7 +12765,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.13.0(@typescript-eslint/parser@5.62.0(eslint@8.20.0)(typescript@4.9.5))(eslint-import-resolver-node@0.3.10)(eslint@8.20.0):
+  eslint-module-utils@2.14.0(@typescript-eslint/parser@5.62.0(eslint@8.20.0)(typescript@4.9.5))(eslint-import-resolver-node@0.3.10)(eslint@8.20.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -12788,7 +12795,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.20.0
       eslint-import-resolver-node: 0.3.10
-      eslint-module-utils: 2.13.0(@typescript-eslint/parser@5.62.0(eslint@8.20.0)(typescript@4.9.5))(eslint-import-resolver-node@0.3.10)(eslint@8.20.0)
+      eslint-module-utils: 2.14.0(@typescript-eslint/parser@5.62.0(eslint@8.20.0)(typescript@4.9.5))(eslint-import-resolver-node@0.3.10)(eslint@8.20.0)
       hasown: 2.0.4
       is-core-module: 2.16.2
       is-glob: 4.0.3
@@ -12809,7 +12816,7 @@ snapshots:
   eslint-plugin-lit-a11y@2.4.1(eslint@8.20.0):
     dependencies:
       aria-query: 5.3.2
-      axe-core: 4.12.1
+      axe-core: 4.13.0
       axobject-query: 2.2.0
       dom5: 3.0.1
       emoji-regex: 10.6.0
@@ -13053,9 +13060,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  fast-check@3.23.2:
+  fast-check@4.9.0:
     dependencies:
-      pure-rand: 6.1.0
+      pure-rand: 8.4.2
 
   fast-deep-equal@3.1.3: {}
 
@@ -15533,7 +15540,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  pure-rand@6.1.0: {}
+  pure-rand@8.4.2: {}
 
   q@1.5.1: {}
 
