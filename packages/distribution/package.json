@@ -72,7 +72,7 @@
     "typescript": "4.9.5",
     "vite": "8.1.0",
     "vite-plugin-static-copy": "3.4.0",
-    "web-component-analyzer": "1.1.7",
+    "web-component-analyzer": "2.0.0",
     "workbox-cli": "6.6.1"
   },
   "eslintConfig": {
