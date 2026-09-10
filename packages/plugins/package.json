@@ -121,7 +121,7 @@
     "eslint-config-prettier": "8.10.2",
     "eslint-plugin-babel": "5.3.1",
     "eslint-plugin-tsdoc": "0.2.17",
-    "fast-check": "3.23.2",
+    "fast-check": "4.9.0",
     "husky": "9.1.7",
     "lint-staged": "13.3.0",
     "prettier": "2.8.8",
