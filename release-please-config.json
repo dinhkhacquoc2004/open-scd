@@ -1,0 +1,163 @@
+{
+  "changelog-sections": [
+    {
+      "type": "feat",
+      "section": "✨ Features"
+    },
+    {
+      "type": "feature",
+      "section": "✨ Features"
+    },
+    {
+      "type": "fix",
+      "section": "🐞 Bug Fixes"
+    },
+    {
+      "type": "perf",
+      "section": "🚀 Performance Improvements"
+    },
+    {
+      "type": "revert",
+      "section": "Reverts"
+    },
+    {
+      "type": "docs",
+      "section": "📚 Documentation"
+    },
+    {
+      "type": "style",
+      "section": "Styles",
+      "hidden": true
+    },
+    {
+      "type": "chore",
+      "section": "📦 Miscellaneous Chores"
+    },
+    {
+      "type": "refactor",
+      "section": "Code Refactoring"
+    },
+    {
+      "type": "test",
+      "section": "Tests",
+      "hidden": true
+    },
+    {
+      "type": "ci",
+      "section": "Continuous Integration",
+      "hidden": true
+    }
+  ],
+  "packages": {
+    "packages/openscd": {
+      "component": "open-scd",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.33.0",
+      "include-component-in-tag": true,
+      "include-v-in-tag": true,
+      "tag-separator": "@",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "packages/openscd/package.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "packages/core": {
+      "component": "core",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.1.0",
+      "include-component-in-tag": true,
+      "include-v-in-tag": true,
+      "tag-separator": "@",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "packages/core/package.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "packages/forms": {
+      "component": "forms",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1",
+      "include-component-in-tag": true,
+      "include-v-in-tag": true,
+      "tag-separator": "@",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "packages/forms/package.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "packages/xml": {
+      "component": "xml",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1",
+      "include-component-in-tag": true,
+      "include-v-in-tag": true,
+      "tag-separator": "@",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "packages/xml/package.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "packages/plugins": {
+      "component": "plugins",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1",
+      "include-component-in-tag": true,
+      "include-v-in-tag": true,
+      "tag-separator": "@",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "packages/plugins/package.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "e780fb7605cd828740492061a26d3fca21275976",
+  "release-type": "node",
+  "extra-files": [
+    {
+      "type": "json",
+      "path": "packages/distribution/manifest.json",
+      "jsonpath": "$.version"
+    }
+  ]
+}

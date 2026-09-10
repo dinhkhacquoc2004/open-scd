@@ -1,0 +1,202 @@
+{
+  "name": "@compas-oscd/plugins",
+  "version": "0.1.3",
+  "repository": "https://github.com/com-pas/open-scd.git",
+  "directory": "packages/plugins",
+  "description": "The official plug-ins of open-scd.",
+  "keywords": [
+    "SCL",
+    "substation configuration",
+    "IEC",
+    "61850-6",
+    "SCD",
+    "editor"
+  ],
+  "author": "Open-SCD",
+  "license": "Apache-2.0",
+  "type": "module",
+  "files": [
+    "./dist/**"
+  ],
+  "exports": {
+    "./dist/editors/Substation.js": "./dist/editors/Substation.js",
+    "./dist/editors/SingleLineDiagram.js": "./dist/editors/SingleLineDiagram.js",
+    "./dist/editors/GooseSubscriberMessageBinding.js": "./dist/editors/GooseSubscriberMessageBinding.js",
+    "./dist/editors/GooseSubscriberDataBinding.js": "./dist/editors/GooseSubscriberDataBinding.js",
+    "./dist/editors/SMVSubscriberMessageBinding.js": "./dist/editors/SMVSubscriberMessageBinding.js",
+    "./dist/editors/SMVSubscriberDataBinding.js": "./dist/editors/SMVSubscriberDataBinding.js",
+    "./dist/editors/Communication.js": "./dist/editors/Communication.js",
+    "./dist/editors/Protocol104.js": "./dist/editors/Protocol104.js",
+    "./dist/editors/Templates.js": "./dist/editors/Templates.js",
+    "./dist/editors/Cleanup.js": "./dist/editors/Cleanup.js",
+    "./dist/validators/ValidateSchema.js": "./dist/validators/ValidateSchema.js",
+    "./dist/validators/ValidateTemplates.js": "./dist/validators/ValidateTemplates.js",
+    "./dist/menu/OpenProject.js": "./dist/menu/OpenProject.js",
+    "./dist/menu/SaveProject.js": "./dist/menu/SaveProject.js",
+    "./dist/menu/CompareIED.js": "./dist/menu/CompareIED.js",
+    "./dist/menu/Merge.js": "./dist/menu/Merge.js",
+    "./dist/menu/ImportIEDs.js": "./dist/menu/ImportIEDs.js",
+    "./dist/menu/UpdateSubstation.js": "./dist/menu/UpdateSubstation.js",
+    "./dist/menu/NewProject.js": "./dist/menu/NewProject.js",
+    "./dist/menu/VirtualTemplateIED.js": "./dist/menu/VirtualTemplateIED.js",
+    "./dist/menu/SubscriberInfo.js": "./dist/menu/SubscriberInfo.js",
+    "./dist/menu/UpdateDescriptionABB.js": "./dist/menu/UpdateDescriptionABB.js",
+    "./dist/menu/UpdateDescriptionSEL.js": "./dist/menu/UpdateDescriptionSEL.js",
+    "./dist/menu/SclHistory.js": "./dist/menu/SclHistory.js",
+    "./dist/menu/Help.js": "./dist/menu/Help.js",
+    "./dist/menu/ExportCommunication.js": "./dist/menu/ExportCommunication.js",
+    "./dist/oscd-plugins.js": "./dist/oscd-plugins.js"
+  },
+  "dependencies": {
+    "@material/dialog": "14.0.0",
+    "@material/mwc-dialog": "0.22.1",
+    "@material/mwc-fab": "0.22.1",
+    "@material/mwc-formfield": "0.22.1",
+    "@material/mwc-icon": "0.22.1",
+    "@material/mwc-icon-button": "0.22.1",
+    "@material/mwc-icon-button-toggle": "0.22.1",
+    "@material/mwc-list": "0.22.1",
+    "@material/mwc-menu": "0.22.1",
+    "@material/mwc-select": "0.22.1",
+    "@material/mwc-switch": "0.22.1",
+    "@material/mwc-textarea": "0.22.1",
+    "@material/mwc-textfield": "0.22.1",
+    "@material/mwc-button": "0.22.1",
+    "@material/mwc-checkbox": "0.22.1",
+    "@material/mwc-radio": "0.22.1",
+    "@compas-oscd/core": "workspace:*",
+    "@compas-oscd/xml": "workspace:*",
+    "@compas-oscd/open-scd": "workspace:*",
+    "@omicronenergy/oscd-ui": "0.0.11",
+    "@openenergytools/scl-lib": "1.8.0",
+    "lit": "2.8.0",
+    "lit-element": "2.5.1",
+    "lit-html": "1.4.1",
+    "lit-translate": "1.2.1",
+    "marked": "4.3.0",
+    "panzoom": "9.4.4"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint:eslint": "eslint --ext .ts,.html . --ignore-path .gitignore",
+    "format:eslint": "eslint --ext .ts,.html . --fix --ignore-path .gitignore",
+    "lint:prettier": "prettier \"**/*.js\" \"**/*.ts\" --check --ignore-path .gitignore",
+    "format:prettier": "prettier \"**/*.js\" \"**/*.ts\" --write --ignore-path .gitignore",
+    "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+    "format": "pnpm run format:eslint && pnpm run format:prettier",
+    "test": "web-test-runner --coverage",
+    "test:snapshot": "web-test-runner --update-snapshots --coverage",
+    "test:manual": "web-test-runner --manual",
+    "test:watch": "web-test-runner --watch",
+    "test:unit": "web-test-runner --watch --group unit",
+    "test:integration": "web-test-runner --watch --group integration",
+    "doc:clean": "npx rimraf doc",
+    "doc:typedoc": "typedoc --plugin none --out doc --entryPointStrategy expand ./src",
+    "doc:wca": "wca src --outDir doc/components",
+    "doc": "pnpm run doc:clean && pnpm run doc:typedoc && pnpm run doc:wca",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major",
+    "build": "tsc",
+    "bundle": "tsc"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "21.1.0",
+    "@commitlint/config-conventional": "21.1.0",
+    "@open-wc/eslint-config": "7.0.0",
+    "@open-wc/semantic-dom-diff": "0.19.5",
+    "@open-wc/testing": "2.5.33",
+    "@types/marked": "2.0.5",
+    "@types/node": "18.19.130",
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0",
+    "@web/dev-server-esbuild": "0.2.16",
+    "@web/test-runner": "0.20.2",
+    "@web/test-runner-playwright": "0.11.1",
+    "@web/dev-server-polyfill": "1.0.6",
+    "concurrently": "7.6.0",
+    "deepmerge": "4.3.1",
+    "eslint": "8.20.0",
+    "eslint-config-prettier": "8.10.2",
+    "eslint-plugin-babel": "5.3.1",
+    "eslint-plugin-tsdoc": "0.2.17",
+    "fast-check": "3.23.2",
+    "husky": "9.1.7",
+    "lint-staged": "13.3.0",
+    "prettier": "2.8.8",
+    "sinon": "17.0.2",
+    "source-map": "0.7.6",
+    "standard-version": "9.5.0",
+    "tslib": "2.8.1",
+    "typedoc": "0.23.28",
+    "typedoc-plugin-markdown": "3.12.0",
+    "typescript": "4.9.5",
+    "web-component-analyzer": "1.1.7",
+    "workbox-cli": "6.6.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@open-wc/eslint-config",
+      "eslint-config-prettier"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "standard-version": {
+    "types": [
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes"
+      },
+      {
+        "type": "chore",
+        "hidden": true
+      },
+      {
+        "type": "docs",
+        "hidden": true
+      },
+      {
+        "type": "style",
+        "hidden": true
+      },
+      {
+        "type": "refactor",
+        "hidden": true
+      },
+      {
+        "type": "perf",
+        "hidden": true
+      },
+      {
+        "type": "test",
+        "hidden": true
+      }
+    ],
+    "commitUrlFormat": "https://github.com/com-pas/open-scd/commits/{{hash}}"
+  }
+}
